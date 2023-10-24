@@ -1,0 +1,37 @@
+{
+  "name": "path-is-same",
+  "version": "1.0.17",
+  "description": "",
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/path-is-same#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "ynpx nyc yarn run test",
+    "lint": "ynpx eslint **/*.ts",
+    "test": "jest",
+    "test:jest": "jest --coverage",
+    "test:mocha": "ynpx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes --bump patch",
+    "preversion": "yarn run test",
+    "prepublish:lockfile": "ynpx sync-lockfile .",
+    "postpublish_": "git commit -m \"chore(release): publish & git push & echo postpublish\" .",
+    "ncu": "ynpx yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "tslib": "^2.3.1",
+    "upath2": "^3.1.12"
+  },
+  "gitHead": "008b0ff206ac188acd641377c3a6e4fb3a73acbe"
+}

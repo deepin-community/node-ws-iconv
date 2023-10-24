@@ -1,5 +1,37 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-ws-iconv (0.0~git20220306210217.c039e94-5) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + node-ws-iconv: Add Multi-Arch: foreign.
+  * Trim trailing whitespace.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 22 Nov 2022 10:15:40 +0000
+
+node-ws-iconv (0.0~git20220306210217.c039e94-4) unstable; urgency=medium
+
+  * Team upload
+  * Replace __proto__ calls
+
+ -- Yadd <yadd@debian.org>  Sat, 17 Sep 2022 18:44:03 +0200
+
+node-ws-iconv (0.0~git20220306210217.c039e94-3) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Add recommended dependencies
+  * Don't install components with missing dependencies
+
+ -- Yadd <yadd@debian.org>  Mon, 08 Aug 2022 20:45:33 +0200
+
+node-ws-iconv (0.0~git20220306210217.c039e94-2) unstable; urgency=medium
+
+  * Source-only upload for migration to testing.
+
+ -- Roland Mas <lolando@debian.org>  Mon, 09 May 2022 12:56:47 +0200
+
+node-ws-iconv (0.0~git20220306210217.c039e94-1) unstable; urgency=medium
+
+  * Initial release (closes: #1010309).
+
+ -- Roland Mas <lolando@debian.org>  Thu, 28 Apr 2022 22:13:29 +0200

@@ -1,0 +1,65 @@
+{
+  "name": "iconv-jschardet",
+  "version": "2.0.24",
+  "description": "Convert/auto-detection Character encodings  in JavaScript ( iconv-lite, jschardet )",
+  "keywords": [
+    "big-5",
+    "big5",
+    "buffer",
+    "charset",
+    "chinese",
+    "conv",
+    "convert",
+    "create",
+    "decode",
+    "encode",
+    "encoding",
+    "euc-jp",
+    "extra",
+    "gb2312",
+    "gbk",
+    "iconv",
+    "iconv-lite",
+    "icu",
+    "jschardet",
+    "output",
+    "read",
+    "shift_jis",
+    "text",
+    "unicode",
+    "utf-8"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/iconv-jschardet#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes --cd-version patch",
+    "preversion": "yarn run test",
+    "prepublish:lockfile": "ynpx sync-lockfile .",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort"
+  },
+  "dependencies": {
+    "debug-color2": "^1",
+    "env-bool": "^2.0.1",
+    "iconv-lite": "^0.6.3",
+    "jschardet": "^3.0.0",
+    "tslib": "^2.3.1"
+  },
+  "gitHead": "980dc5dbf475245ac510f916015f0999ebd8e3fd"
+}

@@ -1,0 +1,86 @@
+{
+  "name": "fs-iconv",
+  "version": "3.1.8",
+  "description": "save file with charset/encoding/iconv",
+  "keywords": [
+    "async",
+    "big-5",
+    "big5",
+    "buffer",
+    "charset",
+    "chinese",
+    "convert",
+    "copy",
+    "create",
+    "decode",
+    "delete",
+    "directory",
+    "encode",
+    "encoding",
+    "euc-jp",
+    "extra",
+    "file",
+    "file system",
+    "fs",
+    "gb2312",
+    "gbk",
+    "iconv",
+    "iconv-lite",
+    "icu",
+    "json",
+    "mkdir",
+    "mkdirp",
+    "mkdirs",
+    "move",
+    "output",
+    "read",
+    "recursive",
+    "remove",
+    "shift_jis",
+    "stream",
+    "string",
+    "sync",
+    "text",
+    "touch",
+    "unicode",
+    "utf-8",
+    "write"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/fs-iconv#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes --cd-version patch",
+    "preversion": "yarn run test",
+    "prepublish:lockfile": "ynpx sync-lockfile .",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort"
+  },
+  "dependencies": {
+    "@lazy-node/sanitize-filename": "^1.0.3",
+    "bluebird": "^3.7.2",
+    "fs-extra": "^10.0.1",
+    "iconv-jschardet": "^2.0.24",
+    "lodash": "^4.17.21",
+    "ts-type": "^2.1.5",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "sanitize-filename": "^1.6.3"
+  },
+  "gitHead": "980dc5dbf475245ac510f916015f0999ebd8e3fd"
+}

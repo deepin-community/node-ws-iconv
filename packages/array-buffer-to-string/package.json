@@ -1,0 +1,47 @@
+{
+  "name": "@bluelovers/array-buffer-to-string",
+  "version": "1.0.28",
+  "private": false,
+  "description": "",
+  "keywords": [
+    "iconv",
+    "jschardet",
+    "iconv-jschardet"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/array-buffer-to-string#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "ynpx eslint **/*.ts",
+    "test": "echo \"Error: no test specified\"",
+    "test:jest": "jest --coverage",
+    "test:mocha": "ynpx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes",
+    "preversion": "yarn run test",
+    "prepublish:lockfile": "ynpx sync-lockfile .",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "iconv-jschardet": "^2.0.24",
+    "tslib": "^2.3.1",
+    "typedarray-to-buffer": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "980dc5dbf475245ac510f916015f0999ebd8e3fd"
+}

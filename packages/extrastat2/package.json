@@ -1,0 +1,50 @@
+{
+  "name": "extrastat2",
+  "version": "4.2.21",
+  "description": "Resolve fs.Stat to mimetype, ownername, groupname, and human-readable permissions.",
+  "keywords": [
+    "MIME",
+    "mimetype",
+    "Content-Type",
+    "/etc/group",
+    "/etc/passwd",
+    "stat",
+    "permissions",
+    "uid",
+    "gid",
+    "groups",
+    "fs.stat",
+    "fs"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/extrastat2#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "Colten Jackson",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "preversion": "yarn run test",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "ncu": "ynpx --quiet yarn-tool -- ncu -u",
+    "sort-package-json": "ynpx --quiet yarn-tool -- sort"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "mime-types": "^2.1.34",
+    "path-parents": "^1.0.19",
+    "stat-mode": "^1.0.0",
+    "ts-type": "^2.1.5",
+    "tslib": "^2.3.1"
+  },
+  "gitHead": "008b0ff206ac188acd641377c3a6e4fb3a73acbe"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "iconv-html-sniffer",
+  "version": "1.0.23",
+  "description": "",
+  "keywords": [
+    "iconv",
+    "jschardet",
+    "iconv-jschardet"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/iconv-html-sniffer#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "ynpx nyc yarn run test",
+    "lint": "ynpx eslint **/*.ts",
+    "test": "echo \"Error: no test specified\"",
+    "test:jest": "jest --coverage",
+    "test:mocha": "ynpx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes",
+    "preversion": "yarn run test",
+    "prepublish:lockfile": "ynpx sync-lockfile .",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "ynpx yarn-tool ncu -u",
+    "sort-package-json": "ynpx yarn-tool sort",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "html-encoding-sniffer": "^3.0.0",
+    "iconv-jschardet": "^2.0.24",
+    "tslib": "^2.3.1"
+  },
+  "gitHead": "980dc5dbf475245ac510f916015f0999ebd8e3fd"
+}

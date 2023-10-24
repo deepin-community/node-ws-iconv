@@ -1,0 +1,6 @@
+!packages/@lazy-node/sanitize-filename
+!packages/extrastat2
+!packages/fs-iconv
+!packages/fs-hardlink-win
+!packages/iconv-html-sniffer
+!packages/iconv-jschardet
