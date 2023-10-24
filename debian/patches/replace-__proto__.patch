@@ -1,0 +1,41 @@
+Description: replace __proto__ calls
+Author: Yadd <yadd@debian.org>
+Forwarded: no
+Last-Update: 2022-09-17
+
+--- a/packages/upath2/core.js
++++ b/packages/upath2/core.js
+@@ -17,7 +17,7 @@
+         this.node = path_1.default;
+         let _static = (0, util_1.getStatic)(this);
+         // @ts-ignore
+-        this.fn = (0, util_1.defaults)(this.__proto__, _static.fn, path);
++        this.fn = (0, util_1.defaults)(Object.getPrototypeOf(this), _static.fn, path);
+         this.delimiter = (_a = path.delimiter) !== null && _a !== void 0 ? _a : _static.fn.delimiter;
+         [
+             'join',
+@@ -176,4 +176,4 @@
+     throw new TypeError(`this not PathWrap`);
+ }
+ exports._this_origin = _this_origin;
+-//# sourceMappingURL=core.js.map
+\ No newline at end of file
++//# sourceMappingURL=core.js.map
+--- a/packages/upath2/lib/util.js
++++ b/packages/upath2/lib/util.js
+@@ -28,7 +28,7 @@
+ }
+ exports._replace_sep = _replace_sep;
+ function getStatic(who) {
+-    return who.__proto__.constructor;
++    return Object.getPrototypeOf(who).constructor;
+ }
+ exports.getStatic = getStatic;
+ function defaults(destination, ...input) {
+@@ -43,4 +43,4 @@
+     return destination;
+ }
+ exports.defaults = defaults;
+-//# sourceMappingURL=util.js.map
+\ No newline at end of file
++//# sourceMappingURL=util.js.map

@@ -1,0 +1,44 @@
+{
+  "name": "fs-stream-sync",
+  "version": "2.0.9",
+  "description": "File System SyncWriteStream/SyncReadStream implementation from Node.js Core",
+  "keywords": [
+    "File System",
+    "ReadStream",
+    "SyncReadStream",
+    "SyncWriteStream",
+    "WriteStream",
+    "fs",
+    "fs.stream",
+    "node",
+    "node.js",
+    "stream",
+    "sync"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/fs-stream-sync#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "prepublishOnly_": "yarn run prepublishOnly:check-bin && yarn run test",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "ncu": "ynpx --quiet yarn-tool -- ncu -u",
+    "sort-package-json": "ynpx --quiet yarn-tool -- sort"
+  },
+  "dependencies": {
+    "@types/node": "*",
+    "tslib": "^2.3.1"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "path-parents",
+  "version": "1.0.19",
+  "description": "return all the parent directories for a directory",
+  "keywords": [
+    "directory",
+    "parent",
+    "path",
+    "tree"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/path-parents#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "MIT",
+  "author": "James Halliday <mail@substack.net> (http://substack.net)",
+  "main": "index.js",
+  "bin": {},
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "preversion": "yarn run test",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort"
+  },
+  "dependencies": {
+    "path-is-same": "^1.0.17",
+    "tslib": "^2.3.1",
+    "upath2": "^3.1.12"
+  },
+  "gitHead": "008b0ff206ac188acd641377c3a6e4fb3a73acbe"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "path-dir-normalize",
+  "version": "1.0.23",
+  "description": "dir normalize with end of path.sep",
+  "keywords": [],
+  "homepage": "https://github.com/bluelovers/ws-iconv/tree/master/packages/path-dir-normalize#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-iconv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-iconv.git"
+  },
+  "license": "ISC",
+  "author": "bluelovers",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "ynpx nyc yarn run test",
+    "lint": "ynpx eslint **/*.ts",
+    "test": "jest",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "lerna publish --yes --cd-version patch",
+    "preversion": "yarn run test",
+    "prepublish:lockfile": "ynpx sync-lockfile .",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "ynpx sort-package-json ./package.json",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {
+    "tslib": "^2.3.1",
+    "upath2": "^3.1.12"
+  },
+  "gitHead": "cabd8644753e89e8d4bd1f081dc167f87ad9a3f4"
+}
